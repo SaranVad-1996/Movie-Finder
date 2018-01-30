@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="../static/CSS/homeStyle.css" th:href="@{/CSS/homeStyle.css}"/>
+    <script type="text/javascript" th:src="@{/JS/MovieJs.js}"></script>
+  </head>
+  <body onload="loadSelect()">
+    <header>
+      <div class="Page_Title">
+        Movie Finder
+      </div>
+    </header>
+    <nav>
+    	<ul>
+    		<li><a href="/home">Home</a></li>
+    	</ul>
+    </nav>
+      <h2>Find A MOVIE</h2>
+      <form action="#" class="searchForm" th:action="@{/result}" method="get">
+        <table>
+          <tr>
+            <td>Select by genre:</td>
+            <td id="td1">
+            </td>
+          </tr>
+          <tr>
+            <td>Select by country:</td>
+            <td id="td2">
+            </td>
+          </tr>
+          <tr>
+            <td>Select by language:</td>
+            <td id="td3">
+            </td>
+          </tr>
+          <tr>
+            <td>Select by year:</td>
+            <td id="td4">
+            </td>
+          </tr>
+          <tr>
+        	   <td><input type="submit" value="Submit" /></td>
+          </tr>
+         </table>
+        </form>
+  </body>
+</html>

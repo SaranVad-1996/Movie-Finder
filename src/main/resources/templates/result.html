@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="../static/CSS/resultStyle.css" th:href="@{/CSS/resultStyle.css}"/>
+  </head>
+  <body>
+    <header>
+      <div class="Page_Title">
+        Movie Finder
+      </div>
+    </header>
+    <nav>
+    	<ul>
+    		<li><a href="/home">Home</a></li>
+    	</ul>
+    </nav>
+    <div class="result_list">
+      <table>      	
+        <tr class="bordered" th:each="movie : ${movies}">
+		  	<td id="picture"><img style="width:100px;height:195px;" th:src="@{movie.imagepath}"/></td>
+          	<td id="title" th:text="${movie.title}"></td>
+          	<td id="description" th:text="${movie.description}"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

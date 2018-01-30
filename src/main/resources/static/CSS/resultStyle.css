@@ -1,0 +1,76 @@
+div.Page_Title {
+	  text-align: center;
+   	background-color: blue;
+    color: white;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    border-top: 10px;
+    margin-top: 0px;
+    margin-bottom:0px;
+		display: block;
+}
+
+body {
+	margin-top: 0px;
+    margin: 0px;
+	background-image: url('../Images/c_scale,fl_progressive,q_80,w_800.jpg');
+}
+
+h2 {
+	text-align: center;
+	color: #3333ff;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3366ff;
+    width:100%;
+    margin-bottom: 10px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #3333ff;
+}
+
+div.result_list{
+  width: 400px;
+  height: 650px;
+  margin: 0 auto;
+  background-color: #ffff;
+}
+
+#title{
+	position: relative;
+	left: 32px;
+  	vertical-align: text-top;
+}
+
+#description{
+	position: relative;
+	top: 20px;
+	right: 30px;
+}
+
+#picture{	
+  font-size: 25px;
+}
+
+tr.bordered {
+    border-bottom: 2px solid black;
+}

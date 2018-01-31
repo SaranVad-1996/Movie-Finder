@@ -2,14 +2,12 @@ package com.moviefinder.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 /*
  * Author: Saran Vadlamudi
- * Description: Controller handles the request and response.
+ * Description: Controller receives request and handles which view should be shown based on value in the request.
  */
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.moviefinder.repository.MovieRepository;
 import com.moviefinder.service.MovieService;
 
 @Controller
@@ -23,7 +21,7 @@ public class MovieFinderController {
 	 * @param model
 	 * @return "home"
 	 */
-	@RequestMapping("/home")
+	@RequestMapping(value="/home")
 	public String homepage(Model model) {
 		return "home";
 	}
@@ -32,6 +30,8 @@ public class MovieFinderController {
 	 * After submitting the form on the home page,
 	 * this method returns with the result page with movies that satisfies the parameters
 	 * 
+	 * The if-else statements filters out the null values in the parameters. This makes sure the movies that
+	 * satisfies the criteria the user wants will be displayed on the result page.
 	 * @param genre
 	 * @param country
 	 * @param lang

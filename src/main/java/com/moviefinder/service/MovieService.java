@@ -1,5 +1,8 @@
 package com.moviefinder.service;
-
+/*
+ * Author: Saran
+ * Description: Service class is the layer between the repository and the controller which needs utilizes the DAO's methods 
+ */
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

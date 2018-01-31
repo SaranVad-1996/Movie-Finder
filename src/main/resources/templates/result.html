@@ -19,7 +19,7 @@
     <div class="result_list">
       <table>      	
         <tr class="bordered" th:each="movie : ${movies}">
-		  	<td id="picture"><img style="width:100px;height:195px;" th:src="@{movie.imagepath}"/></td>
+		  	<td id="picture"><img style="width:100px;height:195px;" th:src="@{${movie.imagepath}}"/></td>
           	<td id="title" th:text="${movie.title}"></td>
           	<td id="description" th:text="${movie.description}"></td>
         </tr>

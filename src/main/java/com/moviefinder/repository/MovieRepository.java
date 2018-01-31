@@ -32,7 +32,7 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 	
 	@Query(value="SELECT * "
 				+"FROM movie "
-				+"WHERE movie.year=?1",nativeQuery=true)
+				+"WHERE movie.year=?",nativeQuery=true)
 	List<Movie> findAllByYear(Integer year);
 	
 	@Query(value="SELECT * "
@@ -53,7 +53,7 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 		    +"FROM movie INNER JOIN movie_genre "
 		    +	"ON movie.movieid = movie_genre.movieid INNER JOIN genre "
 		    +	"ON movie_genre.genreid = genre.genreid "
-		    +"WHERE genre.genrename=? AND movie.country=? AND movie.language=? AND movie.year=?1",nativeQuery=true)
+		    +"WHERE genre.genrename=? AND movie.country=? AND movie.language=? AND movie.year=?",nativeQuery=true)
 	List<Movie> findByGenreCountryLangYear(String genre,String country,String language,Integer year);
 	
 	@Query(value="SELECT * "
@@ -67,21 +67,21 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 		    +"FROM movie INNER JOIN movie_genre "
 		    +	"ON movie.movieid = movie_genre.movieid INNER JOIN genre "
 		    +	"ON movie_genre.genreid = genre.genreid "
-		    +"WHERE genre.genrename=? AND movie.language=? AND year=?1",nativeQuery=true)
+		    +"WHERE genre.genrename=? AND movie.language=? AND year=?",nativeQuery=true)
 	List<Movie> findAllByGenreLangYear(String genre,String language,Integer year);
 	
 	@Query(value="SELECT * "
 		    +"FROM movie INNER JOIN movie_genre "
 		    +	"ON movie.movieid = movie_genre.movieid INNER JOIN genre "
 		    +	"ON movie_genre.genreid = genre.genreid "
-		    +"WHERE genre.genrename=? AND movie.country=? AND movie.year=?1",nativeQuery=true)
+		    +"WHERE genre.genrename=? AND movie.country=? AND movie.year=?",nativeQuery=true)
 	List<Movie> findByGenreCountryYear(String genre,String country,Integer year);
 	
 	@Query(value="SELECT * "
 		    +"FROM movie INNER JOIN movie_genre "
 		    +	"ON movie.movieid = movie_genre.movieid INNER JOIN genre "
 		    +	"ON movie_genre.genreid = genre.genreid "
-		    +"WHERE genre.genrename=? AND movie.year=?1",nativeQuery=true)
+		    +"WHERE genre.genrename=? AND movie.year=?",nativeQuery=true)
 	List<Movie> findAllByGenreYear(String genre,Integer year);
 	
 	@Query(value="SELECT * "
@@ -91,7 +91,7 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 	
 	@Query(value="SELECT * "
 				+"FROM movie "
-				+"WHERE movie.country=? AND movie.language=? AND movie.year=?1",nativeQuery=true)
+				+"WHERE movie.country=? AND movie.language=? AND movie.year=?",nativeQuery=true)
 	List<Movie> findAllByCountryLangYear(String country,String language,Integer year);
 	
 	@Query(value="SELECT * "
@@ -101,6 +101,6 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 	
 	@Query(value="SELECT * "
 				+"FROM movie "
-				+"WHERE movie.language=? AND movie.year=?1",nativeQuery=true)
+				+"WHERE movie.language=? AND movie.year=?",nativeQuery=true)
 	List<Movie> findAllByLangYear(String language,Integer year);
 }
